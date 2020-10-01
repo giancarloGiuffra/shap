@@ -259,6 +259,9 @@ def bar(shap_values, max_display=10, order=Explanation.abs, clustering=None, clu
     if show:
         pl.show()
 
+    fig.tight_layout()
+    return fig
+
 def get_sort_order(shap_values, dist, clust_order, cluster_threshold, feature_order):
     """ Returns a sorted order of the values where we respect the clustering order when dist[i,j] < cluster_threshold
     """
